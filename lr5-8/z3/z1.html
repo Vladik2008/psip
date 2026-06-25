@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сильченко Владислав</title>
+    <style>
+        .container { 
+            display: grid; 
+            gap: 10px; 
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas: 
+                "header-left header-right header-right"
+                "b1 b4 b5"
+                "b2 b4 b6"
+                "b3 b4 b6"
+                "footer footer footer";
+        }
+        
+        .header-left { 
+            grid-area: header-left; 
+            background: #ddd; 
+            height: 60px; 
+        }
+        .header-right { 
+            grid-area: header-right; 
+            background: #ccc; 
+            height: 60px; 
+        }
+        
+        footer { 
+            grid-area: footer; 
+            background: #ddd; 
+            height: 60px; 
+        }
+        
+        .box { 
+            background: #3498db; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        
+        .b1 { grid-area: b1; }
+        .b2 { grid-area: b2; }
+        .b3 { grid-area: b3; }
+        .b4 { grid-area: b4; background: #e74c3c; min-height: 300px; }
+        .b5 { grid-area: b5; }
+        .b6 { grid-area: b6; }
+
+        /* Планшет (481px - 768px) */
+        @media (max-width: 768px) {
+            .container { 
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                    "header-left header-right"
+                    "b1 b4"
+                    "b2 b4"
+                    "b3 b5"
+                    "b6 b6"
+                    "footer footer";
+            }
+            .b4 { min-height: auto; }
+        }
+
+        /* Мобильный (менее 480px) */
+        @media (max-width: 480px) {
+            .container { 
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "header-left"
+                    "header-right"
+                    "b1"
+                    "b2"
+                    "b3"
+                    "b4"
+                    "b5"
+                    "b6"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box header-left">Логотип</div>
+        <div class="box header-right">Меню</div>
+        
+        <div class="box b1">1</div>
+        <div class="box b2">2</div>
+        <div class="box b3">3</div>
+        <div class="box b4">4</div>
+        <div class="box b5">5</div>
+        <div class="box b6">6</div>
+        <footer class="box">ПОДВАЛ</footer>
+    </div>
+</body>
+</html>

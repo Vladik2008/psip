@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- ОПРЕДЕЛЯЕМ ЯЗЫК ДОКУМЕНТА (РУССКИЙ) СОГЛАСНО ТРЕБОВАНИЯМ -->
+<html lang="ru">
+<head>
+    <!-- ПАРАМЕТР КОДИРОВКИ СТРАНИЦЫ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ТРЕБУЕМЫЙ ЗАГОЛОВОК ОКНА С НОМЕРОМ НАШЕГО ВАРИАНТА (ВАРИАНТ 18) -->
+    <title>ПЗТ-42 — ВАРИАНТ 18 — ВЕРСТКА СЕТОК И МИКРОСЕТОК</title>
+
+    <!-- ОПРЕДЕЛЯЕМ МЕТА-ТЕГИ: КОДИРОВКА, ЯЗЫК, КЛЮЧЕВЫЕ СЛОВА И ОПИСАНИЕ -->
+    <meta name="keywords" content="Вариант 18, ПЗТ-42, ПЗТ-42-43, микросетка, пользовательская форма, карточка товара, полусапожки, добавить адрес доставки, верстка">
+    <meta name="description" content="Лабораторная работа №5-6-7-8 по верстке сеток и микросеток. Выполнена учащимся группы ПЗТ-42. Вариант 18.">
+
+    <!-- ПОДКЛЮЧАЕМ ЕДИНСТВЕННЫЙ ФАЙЛ СТИЛЕЙ SQL style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ОСНОВНОЙ КОНТЕЙНЕР-ОБЕРТКА ШАБЛОНА -->
+    <div id="app-wrapper" class="wrapper">
+
+        <!-- СЕМАНТИЧЕСКИЙ БЛОК: СЕТКА СТРАНИЦЫ -->
+        <div class="page-grid-container">
+
+            <!-- ==========================================================================
+                 ШАПКА ШАБЛОНА (HEADER) С ЛОГОТИПОМ, БУРГЕРОМ И НАВИГАЦИЕЙ (5 ПУНКТОВ)
+                 ========================================================================== -->
+            <header id="main-header">
+                <!-- Логотип компании в шапке -->
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 22h20L12 2zm0 3.3l7 14.2H5l7-14.2z"/>
+                    </svg>
+                    <span class="logo-text">Вариант 18</span>
+                </div>
+                
+                <!-- Скрытый чекбокс-переключатель для анимации гамбургер-меню -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                
+                <!-- Кнопка гамбургера для планшетов и мобильных устройств -->
+                <label for="menu-toggle" class="burger-menu-btn">
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                </label>
+
+                <!-- Горизонтальная/Выдвижная навигация из не менее 5 пунктов -->
+                
+            </header>
+
+            <!-- ==========================================================================
+                 ПРОМЕЖУТОЧНЫЙ БЛОК 1: БЫСТРЫЕ КОНТАКТЫ (Относится к Шаблону)
+                 ========================================================================== -->
+            <section id="block-1" class="grid-block block-1">
+                <!-- Обязательный маркер Блока для визуального контроля преподавателем -->
+                <span class="block-badge">Блок 1</span>
+                <h3 class="block-title">Горячая линия</h3>
+                <div class="block-text">
+                    <p style="margin-bottom: 8px; font-weight: 600;">Служба заботы о клиентах:</p>
+                    <p style="font-family: 'JetBrains Mono', monospace; color: #818cf8; font-size: 14px;">+7 (978) 876-55-345</p>
+                    <p style="margin-top: 10px; font-size: 11px; color: #64748b;">Работаем круглосуточно, без перерывов на обед.</p>
+                </div>
+            </section>
+
+            <!-- ==========================================================================
+                 ПРОМЕЖУТОЧНЫЙ БЛОК 2: ИНФОРМАЦИЯ И ОБЪЯВЛЕНИЯ
+                 ========================================================================== -->
+            <section id="block-2" class="grid-block block-2">
+                <span class="block-badge">Блок 2</span>
+                <h3 class="block-title">Условия доставки</h3>
+                <div class="block-text">
+                    <p>Бесплатная экспресс-доставка в крупные регионы при совершении онлайн-оплаты любого заказа от 5000 рублей.</p>
+                    <p style="margin-top: 8px; color: #0ea5e9; font-weight: 500;">Срок доставки: от 2 дней.</p>
+                </div>
+            </section>
+
+            <!-- ==========================================================================
+                 ПРОМЕЖУТОЧНЫЙ БЛОК 3: ОТЗЫВЫ КЛИЕНТОВ
+                 ========================================================================== -->
+            <section id="block-3" class="grid-block block-3">
+                <span class="block-badge">Блок 3</span>
+                <h3 class="block-title">Отзывы покупателей</h3>
+                <div class="block-text">
+                    <p class="review-text">«Полусапожки просто супер! Очень мягкие, полнота H идеально подошла на широкую ногу. Быстрая доставка в Москву за пару суток!»</p>
+                    <p class="review-author">Екатерина Н., г. Тула</p>
+                </div>
+            </section>
+
+            <!-- ==========================================================================
+                 ПРОМЕЖУТОЧНЫЙ БЛОК 4: ПОЛЬЗОВАТЕЛЬСКАЯ ФОРМА (ДОБАВИТЬ АДРЕС ДОСТАВКИ)
+                 ========================================================================== -->
+            <section id="block-4" class="grid-block block-4">
+                <span class="block-badge">Блок 4</span>
+                
+                <!-- Собранная форма по Варианту 18 согласно Макету -->
+                <div class="delivery-form-card">
+                    <div class="form-header-bar">
+                        <h2>Добавить адрес доставки</h2>
+                    </div>
+
+                    <!-- Форма -->
+                    <form class="form-body-content" onsubmit="event.preventDefault(); alert('Форма отправлена успешно! Адрес доставки зафиксирован.');">
+                        
+                        <!-- Поле 1: Имя получателя -->
+                        <div class="form-control-row">
+                            <label for="receiver-name">Имя получателя:</label>
+                            <input type="text" id="receiver-name" class="input-field" value="Dmitriy Naumov" required>
+                        </div>
+
+                        <!-- Поле 2: Страна / Регион -->
+                        <div class="form-control-row">
+                            <label for="country">Страна/Регион:</label>
+                            <select id="country" class="input-field">
+                                <option value="Russia" selected>Russian Federation</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Kazakhstan">Kazakhstan</option>
+                            </select>
+                        </div>
+
+                        <!-- Поле 3: Адрес (включая две строки под макет) -->
+                        <div class="form-control-row">
+                            <label for="street-1">Улица, дом, кв.:</label>
+                            <div class="street-inputs-wrapper">
+                                <input type="text" id="street-1" class="input-field" value="Gogolya 37-15" required>
+                                <input type="text" id="street-2" class="input-field" placeholder="Дом, Квартира, Корпус, Подъезд">
+                            </div>
+                        </div>
+
+                        <!-- Поле 4: Край/Область/Регион -->
+                        <div class="form-control-row">
+                            <label for="province">Край/Регион:</label>
+                            <select id="province" class="input-field">
+                                <option value="Moscow" selected>Moscow</option>
+                                <option value="Leningrad">Leningrad Region</option>
+                                <option value="Siberia">Siberian Region</option>
+                            </select>
+                        </div>
+
+                        <!-- Поле 5: Город -->
+                        <div class="form-control-row">
+                            <label for="city">Город:</label>
+                            <input type="text" id="city" class="input-field" value="Moscow" required>
+                        </div>
+
+                        <!-- Поле 6: Индекс + чекбокс -->
+                        <div class="form-control-row" style="margin-bottom: 2px;">
+                            <label for="postal">Почтовый индекс:</label>
+                            <input type="text" id="postal" class="input-field" value="109117">
+                        </div>
+                        <div class="checkbox-alignment">
+                            <input type="checkbox" id="no-zip">
+                            <label for="no-zip">В моём адресе нет почтового кода.</label>
+                        </div>
+
+                        <!-- Поле 7: Мобильный телефон (три блока ввода + нежно-желтый инпут автозаполнения) -->
+                        <div class="form-control-row" style="margin-bottom: 2px;">
+                            <label>Мобильный телефон:</label>
+                            <div class="phone-grid-inputs">
+                                <span class="phone-plus-sign">+</span>
+                                <input type="text" class="input-field phone-code-mini" value="7" aria-label="Код страны">
+                                <input type="text" class="input-field phone-code-mid" value="495" aria-label="Префикс">
+                                <input type="text" class="input-field phone-num-yellow" value="1234567" aria-label="Номер">
+                            </div>
+                        </div>
+
+                        <!-- "or" блок альтернативного телефона -->
+                        <div class="phone-alternative-row">
+                            <span class="or-divider-label">or</span>
+                            <input type="text" class="input-field" placeholder="Дополнительный телефон" aria-label="Альтернативный телефон">
+                        </div>
+
+                        <!-- Кнопки отправки формы ("Save" и "Отмена") -->
+                        <div class="form-actions-wrapper">
+                            <div class="buttons-row">
+                                <button type="submit" class="btn-save-submit">Save</button>
+                                <button type="button" class="btn-cancel" onclick="alert('Действие отменено');">Отмена</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </section>
+
+            <!-- ==========================================================================
+                 ПРОМЕЖУТОЧНЫЙ БЛОК 5: МИКРОСЕТКА КАРТОЧКА ТОВАРА ПОЛУСАПОЖКИ (Вариант 18)
+                 ========================================================================== -->
+            <section id="block-5" class="grid-block block-5">
+                <span class="block-badge">Блок 5</span>
+                
+                <!-- Собранная карточка обуви -->
+                <article class="product-bento-card">
+                    <!-- Изображение товара с белой контрастной подложкой -->
+                    <div class="product-image-section">
+                        <div class="product-image-wrapper">
+                            <img class="boot-main-photo" src="images/image.png" alt="Полусапожки кожаные коричневые" />
+                        </div>
+                        <!-- Кнопка Интерактивной лупы -->
+                        <button type="button" class="magnify-button" onclick="alert('Изображение увеличено до оригинального разрешения!');">
+                            <svg class="magnify-icon" viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            Увеличительное стекло &#9654;
+                        </button>
+                    </div>
+
+                    <!-- Описательная и табличная часть карточки -->
+                    <div class="product-content-desc">
+                        <h2 class="product-title">Полусапожки</h2>
+                        <div class="product-code-meta">Код 852.702.034</div>
+                        
+                        <p class="product-description-text">
+                            Полусапожки из гладкой кожи от Jenny – с восхитительным эффектом «пэчворк» и ручной прострочкой. С застежкой на молнию с внутренней стороны и пряжкой с внешней стороны. Резинки с обеих сторон гарантируют вам еще больше комфорта. Внутренняя отделка из текстиля, мягкая стелька. Нескользящая полиуретановая подошва. Высота голенища ок. 10 см. Широкий каблук высотой ок. 25 мм. Полнота H.
+                        </p>
+
+                        <!-- Табличные характеристики товара -->
+                        <table class="properties-table">
+                            <tr class="property-item-row">
+                                <td class="property-label">Размеры</td>
+                                <td class="property-value">4,5, 5, 5,5, 6, 6,5, 7, 7,5, 8</td>
+                            </tr>
+                            <tr class="property-item-row">
+                                <td class="property-label">Цвета</td>
+                                <td class="property-value">коричневый, черно-бордовый</td>
+                            </tr>
+                            <tr class="property-item-row">
+                                <td class="property-label">Материал</td>
+                                <td class="property-value">100% гладкая кожа</td>
+                            </tr>
+                        </table>
+
+                        <!-- Кнопка добавления в корзину -->
+                        <button type="button" class="btn-buy-now" onclick="alert('Товар успешно добавлен в вашу корзину!');">В корзину</button>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- ==========================================================================
+                 ПРОМЕЖУТОЧНЫЙ БЛОК 6: ИНФОРМАЦИЯ ОБ АКЦИЯХ И ТАЙМЕРЫ
+                 ========================================================================== -->
+            <section id="block-6" class="grid-block block-6">
+                <span class="block-badge">Блок 6</span>
+                <h3 class="block-title">Товар недели!</h3>
+                <div class="block-text" style="display: flex; flex-direction: column; gap: 10px; height: 100%;">
+                    <p>Только в рамках этого отчетного периода на полусапожки действует гарантированная скидка 5%!</p>
+                    <div class="action-countdown">
+                        <div class="countdown-label">до конца акции осталось</div>
+                        <div class="countdown-digits">02:03:10</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================================================
+                 ПОДВАЛ САЙТА (FOOTER) С КОПИРАЙТОМ И ССЫЛКАМИ НА СОЦИАЛЬНЫЕ СЕТИ
+                 ========================================================================== -->
+            <footer id="main-footer">
+                <div class="copyright-info">
+                    &copy; 2026 Лабораторная работа — Вариант 18 — Выполнил учащийся группы ПЗТ-42.
+                </div>
+                <!-- Ссылки на социальные сети согласно общим требованиям -->
+                
+            </footer>
+
+        </div> <!-- конец page-grid-container -->
+
+    </div> <!-- конец wrapper -->
+
+    <!-- Пустой dummy root-контейнер для совместимости и успешной компиляции React-компонентов -->
+    <div id="root"></div>
+
+</body>
+</html>
