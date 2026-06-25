@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Простая версия</title>
+    <!-- Этот документ создан без использования CSS — только чистый HTML. Сложный функционал убран. -->
+</head>
+<body>
+
+    <!-- Шапка портфолио: фотография и заголовок -->
+    <header>
+        <!-- Фотография из папки images (img.png) -->
+        <img src="images/img.jpg" alt="Фото профиля" width="200" height="200">
+        <h1>Портфолио веб-разработчика</h1>
+        <p>Простая демонстрация: таблицы, нумерованные списки, ссылки, форма (нерабочая), аудио и видео.</p>
+        <nav>
+            <strong>Навигация:</strong> 
+            <a href="#tables">Таблицы</a> | 
+            <a href="#lists">Нумерованные списки</a> | 
+            <a href="#media">Аудио/Видео</a> | 
+            <a href="#form">Форма</a> | 
+            <a href="#links">Ссылки</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <!-- Секция 1: Таблицы (простые, без сложных объединений) -->
+        <section id="tables">
+            <h2>📊 Таблицы</h2>
+            <p>Простые таблицы с данными.</p>
+
+            <!-- Простая таблица 3x3 -->
+            <h3>Мои проекты</h3>
+            <table border="1" cellpadding="8">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название проекта</th>
+                        <th>Год</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Интернет-магазин книг</td><td>2023</td></tr>
+                    <tr><td>2</td><td>Блог о путешествиях</td><td>2024</td></tr>
+                    <tr><td>3</td><td>Портфолио на HTML</td><td>2025</td></tr>
+                </tbody>
+            </table>
+            <br>
+
+            <!-- Ещё одна простая таблица без rowspan/colspan -->
+            <h3>Навыки и инструменты</h3>
+            <table border="1" cellpadding="5">
+                <tr>
+                    <th>Категория</th>
+                    <th>Инструмент</th>
+                    <th>Уровень (1-5)</th>
+                </tr>
+                <tr>
+                    <td>Frontend</td>
+                    <td>HTML5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Frontend</td>
+                    <td>JavaScript</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Backend</td>
+                    <td>Python</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Базы данных</td>
+                    <td>SQL</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Секция 2: Нумерованные списки (простые, без сложной вложенности) -->
+        <section id="lists">
+            <h2>🔢 Нумерованные списки</h2>
+            <p>Примеры упорядоченных списков (ol).</p>
+
+            <h3>Достижения за 2024 год</h3>
+            <ol>
+                <li>Разработал 5 лендингов.</li>
+                <li>Прошёл курс по React.</li>
+                <li>Оптимизировал работу трёх сайтов.</li>
+                <li>Выступил на митапе по HTML.</li>
+            </ol>
+
+            <h3>План обучения на 2025 год</h3>
+            <ol type="I">
+                <li>Изучить TypeScript</li>
+                <li>Освоить Node.js</li>
+                <li>Создать проект с видео</li>
+                <li>Написать портфолио без CSS</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <!-- Секция 3: Аудио и Видео (простые плееры) -->
+        <section id="media">
+            <h2>🎵 Аудио и 🎥 Видео</h2>
+            <p>Встроенные элементы управления. Файлы из открытых источников.</p>
+
+            <h3>Аудио-плеер</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает тег audio.
+            </audio>
+            <p><em>Композиция "SoundHelix Song 1" (лицензия CC BY 3.0).</em></p>
+
+            <h3>Видео-плеер</h3>
+            <video width="640" height="360" controls>
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <p><em>Тестовое видео "For Bigger Blazes".</em></p>
+        </section>
+
+        <hr>
+
+        <!-- Секция 4: Нерабочая форма регистрации (максимально простая) -->
+        <section id="form">
+            <h2>📝 Форма регистрации (нерабочая, демо)</h2>
+            <p>Форма только для визуального отображения. Кнопка ничего не отправляет.</p>
+
+            <form onsubmit="return false;">
+                <fieldset>
+                    <legend>Регистрация</legend>
+                    
+                    <label for="fullname">Полное имя:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван"><br><br>
+
+                    <label for="email">Электронная почта:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com"><br><br>
+
+                    <label for="password">Пароль:</label><br>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <label>Пол:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Мужской</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Женский</label><br><br>
+
+                    <label for="country">Страна:</label><br>
+                    <select id="country" name="country">
+                        <option>Россия</option>
+                        <option>Беларусь</option>
+                        <option>Казахстан</option>
+                    </select><br><br>
+
+                    <label>Интересы:</label><br>
+                    <input type="checkbox" name="interest" value="html"> HTML
+                    <input type="checkbox" name="interest" value="js"> JavaScript
+                    <input type="checkbox" name="interest" value="media"> Мультимедиа<br><br>
+
+                    <label for="bio">О себе:</label><br>
+                    <textarea id="bio" name="bio" rows="3" cols="40" placeholder="Кратко о себе..."></textarea><br><br>
+
+                    <button type="submit">Зарегистрироваться (нерабочая)</button>
+                    <button type="reset">Очистить</button>
+                    <p><small>⚠️ Форма демонстрационная, данные никуда не отправляются.</small></p>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Секция 5: ссылки на внешние ресурсы и якоря -->
+        <section id="links">
+            <h2>🔗 Полезные ссылки</h2>
+            <p>Ссылки на внешние ресурсы и внутренние разделы.</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/ru/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://validator.w3.org/" target="_blank">Валидатор W3C</a></li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                <li><a href="#tables">Перейти к таблицам</a></li>
+                <li><a href="#form">Перейти к форме регистрации</a></li>
+                <li><a href="#media">Перейти к аудио/видео</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Подвал -->
+        <footer>
+            <p>&copy; 2025 Портфолио. Создано на чистом HTML (без CSS).</p>
+            <p>Медиафайлы из открытых источников (Creative Commons, тестовые образцы).</p>
+            <p>Email: <a href="mailto:example@portfolio.com">example@portfolio.com</a></p>
+        </footer>
+    </main>
+</body>
+</html>

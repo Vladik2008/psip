@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сильченко Владислав</title>
+    <style>
+        body { margin: 0; padding: 10px; background: #f0f0f0; }
+        .wrapper { 
+            display: grid; 
+            width: 100%; 
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 1%;
+            grid-template-columns: 30% 38% 29%; /* Сумма с учетом gap примерно 100% */
+            grid-template-areas: 
+                "header-left header-right header-right"
+                "col1 col2 col3"
+                "footer footer footer";
+        }
+        
+        .header-left { 
+            grid-area: header-left; 
+            background: #8e44ad; 
+            height: 100px; 
+        }
+        .header-right { 
+            grid-area: header-right; 
+            background: #9b59b6; 
+            height: 100px; 
+        }
+        
+        footer { 
+            grid-area: footer; 
+            background: #8e44ad; 
+            height: 100px; 
+            color: white; 
+        }
+        
+        .col-1 { 
+            grid-area: col1;
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        }
+        .col-2 { 
+            grid-area: col2;
+            background: #27ae60; 
+            min-height: 400px; 
+        }
+        .col-3 { 
+            grid-area: col3;
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        }
+        
+        .box { 
+            background: #ecf0f1; 
+            border: 2px solid #2c3e50; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold;
+        }
+        .h-small { height: 150px; }
+        .h-med { height: 310px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box header-left">Логотип</div>
+        <div class="box header-right">Меню</div>
+        
+        <div class="col-1">
+            <div class="box h-small">1 (30%)</div>
+            <div class="box h-small">2 (30%)</div>
+            <div class="box h-small">3 (30%)</div>
+        </div>
+        <div class="box col-2">4 (40%)</div>
+        <div class="col-3">
+            <div class="box h-small">5 (Остаток)</div>
+            <div class="box h-med">6 (Остаток)</div>
+        </div>
+        <footer class="box">ПОДВАЛ (100%)</footer>
+    </div>
+</body>
+</html>
